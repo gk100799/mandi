@@ -10,16 +10,13 @@ const postSchema = new Schema({
     },
     typeofpost: {
         type: String,
-        enum: ['audio', 'image', 'video'],
+        enum: ['audio', 'image', 'video', 'links', 'text'],
         required: true
     },
     description: {
         type: String,
     },
-    upvotes: {
-        type: Number,
-    },
-    downvotes: {
+    votes: {
         type: Number,
     },
     comments: {

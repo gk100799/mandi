@@ -6,7 +6,8 @@ const graphqlSchema =require('./graphql/schema/index')
 const graphqlResolvers =require('./graphql/resolvers/index')
 const isAuth = require('./middleware/is-auth')
 
-const port = process.env.PORT || 3000
+// const port = process.env.PORT || 4000
+port = 4000
 const app = express();
 
 app.use(isAuth);
