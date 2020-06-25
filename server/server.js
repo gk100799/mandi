@@ -1,12 +1,16 @@
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import mongoose from 'mongoose'
+import "regenerator-runtime/runtime";
 
 import graphqlSchema from './graphql/schema/index'
 import graphqlResolvers from './graphql/resolvers/index'
+import isAuth from './middleware/is-auth'
 
 
-var app = express();
+const app = express();
+
+app.use(isAuth);
 
 app.use('/graphql', graphqlHTTP({
   schema: graphqlSchema,
