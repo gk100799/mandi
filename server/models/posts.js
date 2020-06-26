@@ -8,12 +8,19 @@ const postSchema = new Schema({
         required: true,
         ref: 'User'
     },
-    typeofpost: {
+    post_type: {
         type: String,
         enum: ['audio', 'image', 'video', 'links', 'text'],
         required: true
     },
-    description: {
+    interest: {
+        type: String,
+        ref: 'Interests'
+    },
+    title: {
+        type: String,
+    },
+    title: {
         type: String,
     },
     votes: {
