@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Cards from "../CardUI/Card";
+import NavBar from "../NavBar/NavBar";
 
 const cardDetails = [
   {
@@ -40,19 +41,21 @@ const cardDetails = [
 ];
 
 function Homepage() {
-  
-  const cardList = cardDetails.map(elem =>{
-    return (<Cards
-          title={elem.title}
-          image={elem.thumbnail}
-          votes={elem.votes}
-          comments={elem.comments}
-        />)
-  })
+  const cardList = cardDetails.map((elem) => {
+    return (
+      <Cards
+        title={elem.title}
+        image={elem.thumbnail}
+        votes={elem.votes}
+        comments={elem.comments}
+      />
+    );
+  });
 
   return (
     <div>
-      <div class="grid xl:grid-cols-5 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-2">
+      <NavBar />
+      <div className="grid xl:grid-cols-5 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-2 ">
         {cardList}
         {/* <Cards
           title={cardDetails[0].title}
