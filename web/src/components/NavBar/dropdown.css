@@ -1,0 +1,16 @@
+.menu {
+  display: none;
+  position: absolute;
+  float: left;
+  right: 1%;
+  transition-duration: 300ms;
+}
+
+#drop-button {
+  position: relative;
+}
+
+.drop:hover .menu {
+  display: inline-block;
+  transition-duration: 300ms;
+}
